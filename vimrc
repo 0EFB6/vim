@@ -102,8 +102,8 @@ nmap <CR> o<Esc>
 
 "set t_Co=256
 
-"set background=dark 
-colorscheme medic_chalk
+set background=dark 
+colorscheme PaperColor 
 
 set laststatus=2
 autocmd BufNewFile,BufRead *.asm set syntax=nasm
@@ -286,7 +286,8 @@ function! g:Active() abort
     let l:statusline = get(s:currentmode, l:mode, "%1*")[0]  
     let l:statusline.= get(s:currentmode, l:mode, " NORMAL ")[1] 
     let l:statusline.= "%#LineNr#%7*  %t  %5*%="
-    let l:statusline.= "%5* [%{toupper(&filetype)} " . get(s:file_node_extensions, &filetype, '') . " ] [Debian  ] [%p%%] "
+	let l:statusline.= "%5* [%{toupper(&filetype)} " . get(s:file_node_extensions, &filetype, '') . " ] [Arch︁] [%p%%] "
+    "[Debian  ] [%p%%]
     return l:statusline
 endfunction
 
